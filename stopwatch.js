@@ -87,15 +87,8 @@ function startTime() {
   if (hr < 24) {
     document.getElementById("zeroTexthr").innerHTML = print(hr);
   } else {
-    stop();
+    pause();
   }
-}
-
-/*-------hours-----------*/
-if (hr < 24) {
-  document.getElementById("zeroTexthr").innerHTML = print(hr);
-} else {
-  stop();
 }
 
 //create a function that returns '00' plus the current time as it increases
@@ -109,15 +102,12 @@ function print(val) {
 
 function start() {
   t = setInterval(startTime, 1000);
-  //24 hours in seconds is 86400
-  document.getElementsByClassName("startBtn").disabled = true;
+  document.getElementById("startBtn").disabled = true;
 }
-
 function pause() {
   clearInterval(t);
-  document.getElementsByClassName("pauseBtn").disabled = false;
+  document.getElementById("pauseBtn").disabled = false;
 }
-
 function reset() {
   clearInterval(t);
   hr = 0;
