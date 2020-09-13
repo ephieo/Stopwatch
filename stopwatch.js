@@ -106,7 +106,7 @@ function start() {
 }
 function pause() {
   clearInterval(t);
-  document.getElementById("pauseBtn").disabled = false;
+  document.getElementById("startBtn").disabled = false;
 }
 function reset() {
   clearInterval(t);
